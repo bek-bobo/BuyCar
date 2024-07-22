@@ -1,0 +1,15 @@
+services:
+  bakery-postgres:
+    image: 'postgres:16'
+    container_name: CarRental-postgres
+    ports:
+      - '4000:5432'
+    environment:
+      POSTGRES_PASSWORD: postgres
+      POSTGRES_USER: postgres
+      POSTGRES_DB: carRental_postgres
+  bakery-redis:
+    container_name: CarRental-redis
+    image: 'redis:7.2.4'
+    ports:
+      - '2222:6379'
