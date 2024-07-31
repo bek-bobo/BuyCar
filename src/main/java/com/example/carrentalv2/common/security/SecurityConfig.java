@@ -12,7 +12,7 @@ import org.springframework.security.web.SecurityFilterChain;
 @Configuration
 public class SecurityConfig {
 
-    private final String[] whileList = {"permission/**", "role/**", "users/**"};
+    private final String[] whileList = {"permission/**", "role/**", "users/**", "card/**"};
 
     @Bean
     public SecurityFilterChain securityFilterChain(HttpSecurity httpSecurity) throws Exception {

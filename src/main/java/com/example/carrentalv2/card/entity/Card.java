@@ -11,6 +11,7 @@ import lombok.*;
 @Table(name = "card")
 public class Card {
     @Id
+    @Column(unique = true)
     private Long cardNumber;
 
     private String validThru;
