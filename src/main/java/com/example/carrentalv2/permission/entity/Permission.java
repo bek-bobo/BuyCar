@@ -2,10 +2,7 @@ package com.example.carrentalv2.permission.entity;
 
 import com.example.carrentalv2.role.entity.Role;
 import com.example.carrentalv2.user.entity.User;
-import jakarta.persistence.Entity;
-import jakarta.persistence.Id;
-import jakarta.persistence.ManyToMany;
-import jakarta.persistence.Table;
+import jakarta.persistence.*;
 import lombok.*;
 
 import java.util.Set;
@@ -20,6 +17,7 @@ public class Permission {
     @Id
     private UUID id;
 
+    @Column(nullable = false)
     private String name;
 
     @ManyToMany(mappedBy = "permissions")
